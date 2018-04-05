@@ -1,0 +1,9 @@
+name: toy-object-detector
+channels:
+- defaults
+dependencies:
+- numpy
+- pip=9.0.1
+- python=3.6.2
+- scipy=0.19.1
+- scikit-image
