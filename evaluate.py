@@ -2,20 +2,37 @@ from keras_retinanet.bin.evaluate import *
 
 
 def parse_args(args):
-    parser     = argparse.ArgumentParser(description='Evaluation script for a RetinaNet network.')
+    parser = argparse.ArgumentParser(description='Evaluation script for a RetinaNet network.')
     subparsers = parser.add_subparsers(help='Arguments for specific dataset types.', dest='dataset_type')
     subparsers.required = True
 
     csv_parser = subparsers.add_parser('csv')
-    csv_parser.add_argument('--annotations', help='Path to CSV file containing annotations for evaluation.', default=os.path.join('data', 'test', 'annotations.csv'))
-    csv_parser.add_argument('--classes', help='Path to a CSV file containing class label mapping.', default=os.path.join('data', 'test', 'classes.csv'))
+    csv_parser.add_argument(
+        '--annotations', help='Path to CSV file containing annotations for evaluation.',
+        default=os.path.join('data', 'test', 'annotations.csv')
+    )
+    csv_parser.add_argument(
+        '--classes', help='Path to a CSV file containing class label mapping.',
+        default=os.path.join('data', 'test', 'classes.csv')
+    )
 
-    parser.add_argument('model',             help='Path to RetinaNet model.')
-    parser.add_argument('--gpu',             help='Id of the GPU to use (as reported by nvidia-smi).')
-    parser.add_argument('--score-threshold', help='Threshold on score to filter detections with (defaults to 0.5).', default=0.5, type=float)
-    parser.add_argument('--iou-threshold',   help='IoU Threshold to count for a positive detection (defaults to 0.5).', default=0.5, type=float)
-    parser.add_argument('--max-detections',  help='Max Detections per image (defaults to 100).', default=100, type=int)
-    parser.add_argument('--save-path',       help='Path for saving images with detections.', default=os.path.join('data', 'test_result'))
+    parser.add_argument('model', help='Path to RetinaNet model.')
+    parser.add_argument('--gpu', help='Id of the GPU to use (as reported by nvidia-smi).')
+    parser.add_argument(
+        '--score-threshold', help='Threshold on score to filter detections with (defaults to 0.5).',
+        default=0.5, type=float
+    )
+    parser.add_argument(
+        '--iou-threshold', help='IoU Threshold to count for a positive detection (defaults to 0.5).',
+        default=0.5, type=float
+    )
+    parser.add_argument(
+        '--max-detections', help='Max Detections per image (defaults to 100).', default=100, type=int
+    )
+    parser.add_argument(
+        '--save-path', help='Path for saving images with detections.',
+        default=os.path.join('data', 'test_result')
+    )
 
     return parser.parse_args(args)
 
