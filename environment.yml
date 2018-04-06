@@ -7,3 +7,5 @@ dependencies:
 - python=3.6.2
 - scipy=0.19.1
 - scikit-image
+- pip:
+  - git+https://github.com/iver56/generate-shapes.git

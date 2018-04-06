@@ -107,3 +107,9 @@ venv.bak/
 
 # IntelliJ
 .idea
+
+# Temporary requirements file
+condaenv.*.requirements.txt
+
+# Generated dataset
+data/**/*
