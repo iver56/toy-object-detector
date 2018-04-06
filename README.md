@@ -8,3 +8,4 @@
 
 1. Generate dataset: `python generate_dataset.py`
 2. Train model: `python train.py csv`
+3. Start TensorBoard: `tensorboard --logdir=data/tensorboard_logs`
