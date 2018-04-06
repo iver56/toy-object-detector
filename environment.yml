@@ -8,4 +8,6 @@ dependencies:
 - scipy=0.19.1
 - scikit-image
 - pip:
+  - git+https://github.com/iver56/keras-retinanet.git
   - git+https://github.com/iver56/generate-shapes.git
+  - tensorflow-gpu==1.7.0
