@@ -121,3 +121,6 @@ data/model_snapshots/*
 
 # Tensorboard logs
 data/tensorboard_logs/*
+
+# Test result (predicted bounding boxes)
+data/test_result/*
