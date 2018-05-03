@@ -2,6 +2,7 @@ name: toy-object-detector
 channels:
 - defaults
 dependencies:
+- cython
 - h5py=2.7.0
 - hdf5=1.8.15.1
 - numpy
