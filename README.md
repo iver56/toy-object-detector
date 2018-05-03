@@ -9,4 +9,4 @@
 1. Generate dataset: `python generate_dataset.py`
 2. Train model: `python train.py`
 3. Start TensorBoard: `tensorboard --logdir=data/tensorboard_logs`
-4. Evaluate model: `python evaluate.py csv data/model_snapshots/resnet50_csv_25.h5`
+4. Evaluate model: `python evaluate.py`
