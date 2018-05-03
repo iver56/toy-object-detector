@@ -1,4 +1,6 @@
-from keras_retinanet.bin.train import *
+import os
+
+from keras_retinanet.bin.train import main
 
 
 if __name__ == '__main__':
