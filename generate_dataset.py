@@ -50,7 +50,7 @@ def save_images_and_labels(output_directory, images, labels):
 
 
 if __name__ == '__main__':
-    for set_name, num_images in [('training', 300), ('test', 100), ('validation', 100)]:
+    for set_name, num_images in [('training', 1000), ('test', 100), ('validation', 100)]:
         print('Generating {} set ({} images)'.format(set_name, num_images))
         images, labels = generate_shapes(
             number_of_images=num_images,

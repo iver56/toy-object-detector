@@ -5,7 +5,7 @@ from keras_retinanet.bin.train import main
 
 if __name__ == '__main__':
     args = [
-        '--steps', '100',
+        '--steps', '128',
         '--epochs', '30',
         '--snapshot-path', os.path.join('data', 'model_snapshots'),
         '--tensorboard-dir', os.path.join('data', 'tensorboard_logs'),
