@@ -10,3 +10,4 @@
 2. Train model: `python train.py`
 3. Start TensorBoard: `tensorboard --logdir=data/tensorboard_logs`
 4. Evaluate model: `python evaluate.py`
+5. Inference: `python predict.py`
