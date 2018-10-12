@@ -2,15 +2,15 @@ name: toy-object-detector
 channels:
 - defaults
 dependencies:
-- cython
-- h5py=2.7.0
-- hdf5=1.8.15.1
-- numpy
-- pip=9.0.1
-- python=3.6.2
+- cython=0.28.5
+- h5py>=2.7,<3
+- hdf5>=1.8,<2
+- numpy>=1.13.1
+- pip>=9.0.1,<=18.1
+- python=3.6
 - scipy=0.19.1
-- scikit-image
+- scikit-image==0.14.0
 - pip:
-  - git+https://github.com/iver56/keras-retinanet.git#83feca1aa49a8a75ed5d4a2ab43d8c18c6cce3f7
+  - git+https://github.com/fizyr/keras-retinanet.git#078e12d87ecc9422f525965c0dc1a9478117c480
   - git+https://github.com/iver56/generate-shapes.git
-  - tensorflow-gpu==1.7.0
+  - tensorflow-gpu==1.11.0
