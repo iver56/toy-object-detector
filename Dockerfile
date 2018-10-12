@@ -28,6 +28,12 @@ RUN wget --quiet https://repo.anaconda.com/miniconda/Miniconda3-4.5.11-Linux-x86
 
 WORKDIR /usr/src/app
 
+# Install opencv
+RUN apt-get update && \
+    apt-get install -y libopencv-dev && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
 # First copy only environment.yml, to cache dependencies
 COPY environment.yml ./
 RUN conda env create
