@@ -5,8 +5,6 @@ ENV CUDA_PATH /usr/local/cuda
 ENV PATH ${CUDA_PATH}/bin:$PATH
 ENV LD_LIBRARY_PATH ${CUDA_PATH}/bin64:${CUDA_PATH}/lib64:${CUDA_PATH}/lib64/stubs:$LD_LIBRARY_PATH
 
-RUN ln -s ${CUDA_PATH}/lib64/stubs/libcuda.so ${CUDA_PATH}/lib64/stubs/libcuda.so.1
-
 # Miniconda-related environment variables
 ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
 ENV PATH /opt/conda/bin:$PATH
